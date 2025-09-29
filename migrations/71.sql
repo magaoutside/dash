@@ -1,0 +1,1 @@
+INSERT INTO gifts_prices (name, price) VALUES ('Durov''s Cap', 593.5);

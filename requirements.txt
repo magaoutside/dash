@@ -1,0 +1,62 @@
+# Dash Games - Зависимости проекта
+# Обновлено: 2025-08-14
+
+## Production Dependencies (dependencies)
+
+@hono/zod-validator@^0.5.0           # Валидация запросов в Hono с помощью Zod
+@tonconnect/sdk@^3.2.0               # TON Connect SDK для интеграции с блокчейном
+@tonconnect/ui-react@^2.2.0          # React UI компоненты для TON Connect
+hono@4.7.7                           # Легкий веб-фреймворк для Cloudflare Workers
+lucide-react@^0.510.0                # Иконки React компоненты
+react@19.0.0                         # React библиотека
+react-dom@19.0.0                     # React DOM рендеринг
+react-router@^7.5.3                  # Роутинг для React приложений
+zod@^3.24.3                          # Валидация схем TypeScript
+
+## Development Dependencies (devDependencies)
+
+@cloudflare/vite-plugin@^1.9.6       # Vite плагин для Cloudflare Workers
+@eslint/js@9.25.1                    # ESLint конфигурация для JavaScript
+@getmocha/vite-plugins@latest        # Vite плагины Mocha
+@getmocha/users-service@^0.0.4       # Сервис пользователей Mocha (опционально)
+@types/node@22.14.1                  # TypeScript типы для Node.js
+@types/react@19.0.10                 # TypeScript типы для React
+@types/react-dom@19.0.4              # TypeScript типы для React DOM
+@vitejs/plugin-react@4.4.1           # Vite плагин для React
+autoprefixer@^10.4.21                # PostCSS плагин для автопрефиксов
+eslint@9.25.1                        # Линтер JavaScript/TypeScript
+eslint-plugin-react-hooks@5.2.0      # ESLint правила для React хуков
+eslint-plugin-react-refresh@0.4.19   # ESLint плагин для React Fast Refresh
+globals@15.15.0                      # Глобальные переменные для ESLint
+postcss@^8.5.3                       # CSS постпроцессор
+tailwindcss@^3.4.17                  # Utility-first CSS фреймворк
+typescript@5.8.3                     # TypeScript компилятор
+typescript-eslint@8.31.0             # ESLint для TypeScript
+vite@6.3.2                           # Сборщик и dev сервер
+wrangler@^4.25.0                     # CLI для Cloudflare Workers
+
+## Установка зависимостей
+
+```bash
+# Установить все зависимости
+npm install
+
+# Установить новую production зависимость
+npm install package-name
+
+# Установить новую development зависимость  
+npm install -D package-name
+```
+
+## Используемые внешние ресурсы
+
+- Google Fonts (Gilroy) - веб-шрифт
+- Mocha CDN - статические ресурсы и изображения
+- TON Connect - интеграция с TON блокчейном
+
+## Примечания
+
+- Все зависимости должны быть зафиксированы в package.json и package-lock.json
+- Новые зависимости должны документироваться в этом файле с описанием их назначения
+- При обновлении major версий зависимостей проверяйте совместимость
+- Секреты MOCHA_USERS_SERVICE_* необходимы только для аутентификации через Google OAuth

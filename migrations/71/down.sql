@@ -1,0 +1,1 @@
+DELETE FROM gifts_prices WHERE name = 'Durov''s Cap';

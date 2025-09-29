@@ -1,0 +1,11 @@
+
+CREATE TABLE scroll_events (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  scroll_id INTEGER NOT NULL,
+  timestamp INTEGER NOT NULL,
+  user_data TEXT,
+  bet_amount TEXT,
+  currency TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

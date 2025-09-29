@@ -1,0 +1,2 @@
+
+ALTER TABLE pvp_games ADD COLUMN countdown_active BOOLEAN DEFAULT FALSE;

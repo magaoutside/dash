@@ -1,0 +1,11 @@
+
+CREATE TABLE case_wins (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  timestamp INTEGER NOT NULL,
+  user_data TEXT,
+  gift_name TEXT,
+  gift_icon TEXT,
+  gift_background TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
