@@ -1,1 +1,0 @@
-ALTER TABLE pvp_game_results ADD COLUMN winner_items TEXT;

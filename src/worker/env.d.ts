@@ -1,7 +1,0 @@
-interface Env {
-	DB: D1Database;
-	TELEGRAM_BOT_TOKEN?: string;
-	MOCHA_USERS_SERVICE_API_KEY?: string;
-	MOCHA_USERS_SERVICE_API_URL?: string;
-	RECEIVING_WALLET_ADDRESS?: string;
-}

@@ -1,9 +1,0 @@
-
-CREATE TABLE user_wallets (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  user_id TEXT NOT NULL,
-  wallet_address TEXT NOT NULL,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  UNIQUE(user_id, wallet_address)
-);

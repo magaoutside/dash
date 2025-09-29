@@ -1,1 +1,0 @@
-ALTER TABLE pvp_game_results DROP COLUMN winner_items;
