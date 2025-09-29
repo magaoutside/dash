@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url('https://mocha-cdn.com/0198a776-c098-782e-aca7-9f91e506f953/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-70px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+@keyframes liveWinEnter {
+  0% {
+    transform: translateX(-90px) scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.live-win-enter {
+  animation: liveWinEnter 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Для плавного сдвига существующих элементов */
+.live-wins-container {
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(270deg);
+  }
+}
+
+@keyframes cellPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(22, 134, 255, 0.4);
+  }
+  50% {
+    transform: scale(0.9);
+    background: linear-gradient(180deg, #0E5A9A 0%, #0A487C 100%);
+    box-shadow: 0 0 20px rgba(22, 134, 255, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(22, 134, 255, 0.4);
+  }
+}
+
+.cell-pulse {
+  animation: cellPulse 0.4s ease-out;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('https://mocha-cdn.com/0198a776-c098-782e-aca7-9f91e506f953/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Gilroy', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+}
+
+body {
+  background: #060E15;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+#root {
+  width: 412px;
+  min-height: 1263px;
+}
+
+/* Убираем стрелки у input type="number" */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Кастомные классы для шрифтов */
+.font-gilroy-semibold {
+  font-family: 'Gilroy-SemiBold', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+}
+
+.font-gilroy-bold {
+  font-family: 'Gilroy-Bold', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+}
+
+/* Скрытие скроллбаров */
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+
+.overflow-x-auto {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Скрытие всех скроллбаров в приложении */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Отключение зума на всех устройствах */
+html {
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+  -webkit-touch-action: manipulation;
+  -moz-touch-action: manipulation;
+}
+
+body {
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;  
+  -webkit-touch-action: manipulation;
+  -moz-touch-action: manipulation;
+}
+
+/* Дополнительная защита от зума */
+* {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
